@@ -29,6 +29,9 @@ This is how we trained our GRU classifier over the $1-GDS dataset:
   --model_type gru --epochs 400 --patience 40 --batch_size 32 --activation tanh
 ```
 
+When this process ends, a directory will be created (in /tmp by default)
+with the log history and the trained model file in [h5 format](https://hdf5.wiki/index.php/Main_Page).
+
 There are many CLI options you might want to specify,
 such as `--verbose 1` (to see more output info) or `--out_dir somedir` (to set the output directory).
 
@@ -47,7 +50,7 @@ Again, run `python3 main.py -h` to see all the available CLI options.
 ## Paper
 
 A preprint of our ICPR paper is publicly available:
-https://arxiv.org/abs/2001.07803
+https://arxiv.org/abs/2010.13231
 
 ## Citation
 
