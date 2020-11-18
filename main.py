@@ -228,7 +228,7 @@ def sequence_loader(files, batch_size=None):
     X, y = np.array(batch_input), np.array(batch_output)
 
     if args.max_length > 0:
-        X = tf.keras.preprocessing.sequence.pad_sequences(X, maxlen=args.max_length)
+        X = tf.keras.preprocessing.sequence.pad_sequences(X, maxlen=args.max_length, dtype='float32')
         # Ensure we pass in the right data type. Is this is a TF2 issue?
         X = tf.cast(X, tf.float32).numpy()
         y = tf.cast(y, tf.int32).numpy()
